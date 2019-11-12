@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Práctica 11. Formularios</title>
+</head>
+<body>
+    <header><h1>Formularios</h1></header>
+    <main>
+        <form action="ejemplo.php" method="GET">
+            <table border="2">
+                <tbody>
+                    <!-- Primera fila -->
+                    <tr>
+                        <th>Tratamiento: *</th>
+                        <th>Nombre: *</th>
+                        <th>Apellidos 1: *</th>
+                        <th>Apellidos 2: </th>
+                    </tr>
+
+                    <!-- Segunda fila -->
+                    <tr>
+                       <td>
+                            <label><input type="radio" name="hm" value="h" required>Sr.</label>
+                            <label><input type="radio" name="hm" value="m" required>Sra.</label>
+                        </td>
+                       <td>
+                           <label><input type="text" name="nombre" placeholder="Escriba su nombre" required></label>
+                       </td>
+                       <td>
+                           <label><input type="text" name="primapellido" placeholder="Escriba su primer apellido" required></label>
+                       </td> 
+                       <td>
+                           <label><input type="text" name="segapellido" placeholder="Escriba su segundo apellido"></label>
+                       </td>   
+                    </tr>
+
+                    <!-- Tercera fila -->
+                    <tr>
+                        <th>Tipo Doc: *</th>
+                        <th>Nº Doc: * </th>
+                        <th>Fecha de nacimiento: *</th>
+                    </tr>
+
+                    <!-- Cuarta fila -->
+                    <tr>
+                        <td>
+                            <select name="tipodocumento" required>
+                                <option value="dni">D.N.I</option>
+                                <option value="nie">N.I.E</option>
+                            </select>
+                        </td>>
+                        <td>
+                            <label><input type="text" name="numdni" required></label>
+                        </td>
+
+                    </tr>
+                </tbody>
+            </table>
+        </form>
+    </main>
+</body>
+</html>
