@@ -1,0 +1,29 @@
+body{
+    text-align: left;
+    font-family: 'Open Sans', sans-serif;
+}
+
+header{
+    text-align: center;
+}
+
+.primera{
+    width: 90%;
+    margin: auto;
+}
+
+.segunda{
+    width: 90%;
+    margin: auto;
+    padding: 15px 10%;
+    margin-top: 25px;
+    background: beige;
+}
+
+section{
+    border: 2px aquamarine solid;
+}
+
+form {
+    margin: 10px;
+}

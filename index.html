@@ -7,17 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Práctica 11. Formularios</title>
-    <style>
-        body{
-            text-align: left;
-        }
-    </style>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&display=swap" rel="stylesheet">
+
 </head>
 <body>
     <header><h1>Formularios</h1></header>
     <main>
-        <form action="ejemplo.php" method="GET">
-            <table>
+        <section class="cuestionario">
+        <form action="ejemplo.php" method="get">
+            <table class="primera">
                 <!--Parte superior del cuestionario-->
                 <tbody> 
                     <!-- Primer grupo -->
@@ -67,7 +66,7 @@
                         </td>
                     </tr>
 
-                    <!-- Tercera fila -->
+                    <!-- Tercer grupo -->
 
                     <tr>
                         <th>País de Nacimiento: *</th>
@@ -115,7 +114,7 @@
                         </td>
                     </tr>
 
-                    <!-- Cuarta fila --><!--Quinta fila-->
+                    <!-- Cuarto grupo -->
 
                     <tr>
                         <th>Trabajo: *</th>
@@ -129,22 +128,22 @@
                             <select name="trabajo" required>
                                 <option selected>...</option>
                                 <option value="trabajo1">En paro</option>
-                                <option value="trabajo3">Jubilado</option>
-                                <option value="trabajo4">Trabajando</option>
-                                <option value="trabajo5">Estudiando</option>
+                                <option value="trabajo2">Jubilado</option>
+                                <option value="trabajo3">Trabajando</option>
+                                <option value="trabajo4">Estudiando</option>
                             </select>
                         </td>
 
                         <td>
-                            <select name="sector" required>
+                            <select name="actividad" required>
                                 <option selected>...</option>
                                 <option value="act1">No trabaja</option>
                                 <option value="act2">Banca</option>
                                 <option value="act3">Construcción</option>
                                 <option value="act4">Energía</option>
-                                <option value="act6">Industria</option>
-                                <option value="act7">Recursos humanos</option>
-                                <option value="act8">Servicios</option>
+                                <option value="act5">Industria</option>
+                                <option value="act6">Recursos humanos</option>
+                                <option value="act7">Servicios</option>
                             </select>
                         </td>
 
@@ -158,11 +157,148 @@
                                 <option value="sector5">Pensionista</option>
                             </select>
                         </td>
+
+                        <td>
+                            <label><input type="text" name="empresa" required></label>
+                        </td>
+                    </tr>
+
+                    <!--Quinto grupo-->
+                    <tr>
+                        <th>Propósito de la cuenta: *</th>
+                        <th>Origen de sus ahorros: *</th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <select name="proposito" required>
+                                <option selected>...</option>
+                                <option value="prop1">Ahorro</option>
+                                <option value="prop2">Gasto</option>
+                                <option value="prop3">Emergencia</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <select name="origen" required>
+                                <option selected>...</option>
+                                <option value="org1">Nómina o pensión</option>
+                                <option value="org2">La ruleta de la suerte</option>
+                                <option value="org3">Fraude Fiscal</option>
+                            </select>
+                        </td>
                     </tr>
 
                 </tbody>
             </table>
+            
+            <table class="segunda">
+                <!--Parte inferior-->
+                <tbody>
+                    <!--primer grupo-->
+                    <tr>
+                        <th>Tipo de vía: *</th>
+                        <th>Dirección: *</th>
+                        <th>Número: *</th>
+                        <th>Piso: </th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <select name="via" required>
+                                <option selected>...</option>
+                                <option value="via1">CALLE</option>
+                                <option value="via2">AVENIDA</option>
+                                <option value="via3">CARRETERA</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <label><input type="text" name="direccion" required></label>
+                        </td>
+
+                        <td>
+                            <label><input type="text" name="numerodireccion" required></label>
+                        </td>
+
+                        <td>
+                            <label><input type="text" name="piso"></label>
+                        </td>
+                    </tr>
+                    <!--segundo grupo-->
+                    <tr>
+                        <th>Urb/Pol/Otros: </th>
+                        <th>Localidad *</th>
+                        <th>Provincia: *</th>
+                        <th>Código Postal: * </th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            <label><input type="text" name="urb"></label>
+                        </td>
+
+                        <th>
+                            <label><input type="text" name="localidad" required></label>
+                        </th>
+                        
+                        <td>
+                            <select name="provincia" required>
+                                <option selected>...</option>
+                                <option value="prov1">VALENCIA</option>
+                                <option value="prov2">CASTELLÓN</option>
+                                <option value="prov3">ALICANTE</option>
+                            </select>
+                        </td>
+
+                        <td>
+                            <label><input type="text" name="postal"></label>
+                        </td>
+                    </tr>
+                    <!--tercer grupo-->
+                    <tr>
+                        <th>Teléfono móvil: *</th>
+                        <th>Telefono particular: </th>
+                        <th colspan="1">Dirección de email: </th>
+                    </tr>
+
+                    <tr>
+                        <td>
+                        <label><input type="tell" name="movil" required></label>
+                        </td>
+                        <td>
+                            <label><input type="tell" name="particular"></label>
+                        </td>
+                        <td colspan="1">
+                            <label><input type="email" name="mail" required></label>
+                        </td>
+                    </tr>
+                    
+
+
+
+                </tbody>
+            </table>
+            
+            <hr>
+            
+            <p>Para ofrecerle un mejor servicio nos sería útil conocer si posee en otra entidad: 
+            </p>
+            <p>
+                <input type="checkbox" name="entidad" value="1"> Pla de pensiones
+                <input type="checkbox" name="entidad" value="2"> Fondos
+                <input type="checkbox" name="entidad" value="3"> Acciones
+                <input type="checkbox" name="entidad" value="4"> Hipoteca
+                <input type="checkbox" name="entidad" value="5"> Prestamo
+                <input type="checkbox" name="entidad" value="6"> Seguro de vida
+            </p>
+
+            <p>Puede consultar en nuestraWeb o solicitarnos toda la Información Precontractual de nuestros productos.
+                 Al pulsar "Continuar" está aceptando la cláusula de Protección de datos.</p>
+            <label><input type="submit" value="Continuar"></label>
+            <p>(*) Los campos marcados con asterisco son obligatorios.</p>
         </form>
+    </section>
     </main>
 </body>
 </html>
